@@ -1,4 +1,4 @@
-'use client'
+
 import { AnimatedProjects } from "./components/ui/animates-cards";
 
 const ProjectsDisplay = () => {

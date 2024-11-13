@@ -1,4 +1,4 @@
-"use client";
+
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
@@ -38,7 +38,7 @@ export const AnimatedProjects = ({ projects, autoplay = false }) => {
                 <motion.div
                   key={project.src}
                   initial={{ opacity: 0, scale: 0.9, z: -100, rotate: randomRotateY() }}
-                  animate={{
+                    animate={{
                     opacity: isActive(index) ? 1 : 0.7,
                     scale: isActive(index) ? 1 : 0.95,
                     z: isActive(index) ? 0 : -100,
@@ -74,9 +74,9 @@ export const AnimatedProjects = ({ projects, autoplay = false }) => {
             <h3 className="text-2xl font-bold dark:text-white text-black">
               {projects[active].title}
             </h3>
-            <p className="text-sm text-gray-500 dark:text-neutral-500">
+            <span className="text-sm text-gray-500 dark:text-neutral-500">
               Technologies: {projects[active].technologies.join(", ")}
-            </p>
+            </span>
             <motion.p className="text-lg text-gray-500 mt-8 dark:text-neutral-300">
               {projects[active].description.split(" ").map((word, index) => (
                 <motion.span
